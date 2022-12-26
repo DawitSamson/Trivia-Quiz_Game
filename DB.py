@@ -1,7 +1,7 @@
 import mysql.connector as connector
 from DesignColors import ColorLab
 
-# On the DB(DataBase) the below are the operations which will be Done using Python programming
+# On the DB(DataBase) the below are the operations which will be Done using Python programming.
 '''
         CREATE(DB, TABLES) 
         INSERT(DATA)

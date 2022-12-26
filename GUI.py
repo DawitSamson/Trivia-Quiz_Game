@@ -6,7 +6,7 @@ root = Tk()
 
 
 def Gui():
-    # Display the title and label
+    # Display the title and label.
     root.title("TRIVIA/QUIZ GAME by Dawit Belay")
     label = Label(root, text="🎮" * 15, font=('arial', 15, 'bold'), bg="black", fg="Yellow")
     label.pack(side=TOP, fill=X)

@@ -1,6 +1,6 @@
 from DBDisplay import *
 from SMS import *
-# This ia where the AdminUser or User which can check the Admin Detail or Quiz Detail
+# This ia where the AdminUser or User which can check the Admin Detail or Quiz Detail.
 
 
 def MainAdmin():
@@ -20,7 +20,7 @@ def MainAdmin():
         Invalid_DetailsText()
 
 
-def AdminSection():  # This is the function to call on the App Python file
+def AdminSection():  # This is the function to call on the App Python file.
     CheckAdminType = CheckUserTypeDB()
     if CheckAdminType == 1:
         return MainAdmin()

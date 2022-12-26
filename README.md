@@ -13,6 +13,7 @@
 * The Project is Trivia Question Game, It bullied in python and connected to MYSQL database Server
 * Trivia Game is a fun game in which players have to guess the answers of questions by filling the answers boxes with correct letters or choose.
 
+
 ### 🔑 Keywords:
 >* mysql.connector = provide connectivity to the MySQL server for client programs.
 >* pyfiglet = enhance the overall look and structure of the texts used in electronic communication way.

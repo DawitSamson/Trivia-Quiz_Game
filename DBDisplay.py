@@ -92,7 +92,15 @@ def UserSection():
             Choice = int(input("Enter Your Choice: "))
             if Choice == 1:
                 General_InstructionText()
-
+            elif Choice == 2:
+                print(ColorLab.BOLD + ColorLab.GREEN + 'Are You Ready to Take The Exam? ' + ColorLab.END)
+                try:
+                    Selected = input(f"{ColorLab.BOLD + ColorLab.YELLOW + ' Enter Yes (Y) / No (N) : ' + ColorLab.END}")
+                    if Selected == "y" or Selected == "Y" or Selected == "yes" or Selected == "Yes" or Selected == "YES":
+                        UserDB.Display_Question()
+                except Exception as e:
+                    print(e)
+                    Invalid_DetailsText()
             elif Choice == 3:
                 break
             else:
@@ -102,6 +110,13 @@ def UserSection():
             Invalid_DetailsText()
 
 
+def Topics():
+    Question_TopicText()
+
+
+def AllUserDB():
+    print(ColorLab.BOLD + ColorLab.GREEN + '\n************ALL PLAYER SCORE BORD ************\n' + ColorLab.END)
+    ShowUserScore()
 
 
 def CheckUserTypeDB():

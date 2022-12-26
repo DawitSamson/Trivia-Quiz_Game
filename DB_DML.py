@@ -2,6 +2,14 @@ import mysql.connector
 from DesignColors import *
 
 
+def CreateDB():
+    mydb = mysql.connector.connect(host='localhost', user='root', password='dawitsamson123')
+    cursorD = mydb.cursor()
+    DataBase_Name = input("Enter DataBase Name: ")
+    cursorD.execute("CREATE DATABASE '{}'".format(DataBase_Name))  # This is for creating Database
+    mydb.commit()
+    print(ColorLab.BOLD + ColorLab.GREEN + 'DATABASE Created.' + ColorLab.END)
+
 
 def CreateTabel():
     mydb = mysql.connector.connect(host='localhost', user='root', password='dawitsamson123', database='quizgame')
@@ -23,6 +31,27 @@ def CreateTabel():
         mydb.commit()
         print(ColorLab.BOLD + ColorLab.GREEN + 'TABEL Created.' + ColorLab.END)
 
+
+def DeleteTabel():
+    mydb = mysql.connector.connect(host='localhost', user='root', password='dawitsamson123', database='quizgame')
+    cursorDT = mydb.cursor()
+    TabelName = input("Enter Tabel Name: ")
+    Value = TabelName
+    cursorDT.execute("DROP TABLE {}".format(Value))  # To delete the Players' table created
+    mydb.commit()
+    print(ColorLab.BOLD + ColorLab.GREEN + 'TABEL Deleted.' + ColorLab.END)
+
+
+def InsertPlayer_Score():
+    mydb = mysql.connector.connect(host='localhost', user='root', password='dawitsamson123', database='quizgame')
+    cursorAdmin = mydb.cursor()
+    Data = "INSERT INTO Players VALUES(%s,%s) "
+    PlayerName = input("Enter PlayerName: ")
+    Score = input("Enter PlayerScore: ")
+    Values = (PlayerName, Score)
+    cursorAdmin.execute(Data, Values)
+    mydb.commit()
+    print(ColorLab.BOLD + ColorLab.GREEN + 'Player Score Inserted Manually.' + ColorLab.END)
 
 
 def UpdatePlayerScore():

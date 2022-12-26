@@ -54,7 +54,7 @@ def UserSection_WelcomeText():
 
 
 def General_InstructionText():
-    digital_format = pyg.figlet_format("GENERAL INSTRUCTIONS:", font="digital")
+    digital_format = pyg.figlet_format("GENERAL INSTRUCTIONS ", font="digital")
     print(ColorLab.BOLD + ColorLab.DARKCYAN + digital_format + ColorLab.END)
     print(ColorLab.BOLD + ColorLab.WHITE + '\t\t\t1.Each Question has Multiple-Choice Questions.' + ColorLab.END)
     print(ColorLab.BOLD + ColorLab.WHITE + '\t\t\t2.Each Question has 4 options.' + ColorLab.END)

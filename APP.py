@@ -3,6 +3,7 @@ from DBDisplay import *
 from SMS import *
 
 
+
 def MainFunction():
     while True:
         HomePage_WelcomeText()

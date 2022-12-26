@@ -1,4 +1,4 @@
-# This is a Store or a dictionary of colors to simplify on the command line
+# This is a Store or a dictionary of colors to simplify on the command line.
 
 class ColorLab:
     RED = '\033[91m'
